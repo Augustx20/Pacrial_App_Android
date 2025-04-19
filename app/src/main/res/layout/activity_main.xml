@@ -5,23 +5,18 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:accessibilityHeading="false"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/Calendar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="419dp" />
-
+        android:fontFamily="@font/adlam_display"
+        android:text="Calendar"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="#673AB7"
+        android:typeface="sans"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="35dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
