@@ -1,6 +1,11 @@
 package Augusto.Machado.parcial_test_n1;
 
+import static Augusto.Machado.parcial_test_n1.R.id.test;
+
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +25,19 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    @SuppressLint("MissingInflatedId")
+    public void updateMessage(View view){
+        Log.i("test-message","Entrada de datos");
+        //super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.login_activity);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.test), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+
     }
 }
