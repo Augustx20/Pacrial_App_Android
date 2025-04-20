@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void updateMessage(){
-        Log.i("test-message","Incio de sesion con exito!!!!");
+        Toast messageToast = Toast.makeText(this, "Inicio con exito!", Toast.LENGTH_LONG);
+        messageToast.show();
     }
 }
